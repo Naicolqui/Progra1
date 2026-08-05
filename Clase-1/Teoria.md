@@ -2,30 +2,39 @@
 
 a) ¿Cuáles son las condiciones de aprobación de la materia?
 
+Aprobar las 4 instancias: El portafolio completo, la evaluación escrita y el trabajo final.
+
 b) ¿Qué porcentaje corresponde al Portafolio, a la evaluación escrita y al TPO?
 
 Portafolio 30%, evaluación 30%, TPO 40%.
 
 c) ¿Qué tipo de evidencias deberán incorporar al Portafolio durante la cursada?
 
+De la resolución de los ejercicios que hacemos en clase.
+
 d) ¿Cuál es el propósito del TPO y cómo se relaciona con los contenidos de cada unidad?
 
+El objetivo es realizar un trabajo que integre todo lo visto a lo largo de la materia.
+
 e) ¿Qué producciones serán grupales y cuáles requerirán una participación individual?
+
+El trabajo final y el portafolio son grupales. El parcial es individual.
 
 # Ejercicio 2
 
 **Integrantes, comisión y canal de comunicación del equipo:**
 
 - Nicole Quilmore
-- Jessica
-- Priscila
-
+- Jesica Benitez
+- Priscila Challa
 - Canal de comunicación: WhatsApp y Teams
 - Comisión: 584514
 
 **Experiencia previa en programación y expectativas para la materia:**
 
 Nicole: 5 años de experiencia en el ámbito, actualmente trabajo con Java, React y Oracle. Mi expectativa es seguir aprendiendo.
+Jesica:
+Priscila: 
 
 **Nombre del equipo:** Error 404.
 
