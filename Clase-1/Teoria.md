@@ -61,14 +61,39 @@ Una biblioteca universitaria cobra una multa de $800 por cada día de atraso. Si
 *Ing. María Eugenia Varando*
 
 a) Identifiquen los datos de entrada, el procesamiento y la salida.
+Entrada: 
+- Dias de atraso > 0
+- Estado de la reserva del libro
+
+Procesamiento:
+- Calculo de valor de multa
+
+Salida:
+- Valor final de la multa
 
 b) Propongan al menos cuatro casos de prueba, incluyendo situaciones límite.
 
+1) Dias de atraso > 0
+2) Dias de atraso < 0
+3) Libro reservado
+4) Libro sin reservar
+
 c) Escriban el algoritmo en lenguaje natural o pseudocódigo.
+
+int diasAtraso;
+bool estadoReserva;
+
+funcion calculo_multa(estadoReserva, diasAtraso)
+    if(estadoReserva) return (diasAtraso * 800) + 2500;
+    return diasAtraso * 800;
+
 
 d) Representen la solución mediante un diagrama de flujo.
 
+![Diagrama de flujo](../diagrama-de-flujo.png)
+
 e) Implementen el programa en Python y comparen los resultados obtenidos con los casos de prueba.
+Resulto en archivo ejercicio-3.py
 
 # 4. Estructuras de datos
 
@@ -81,10 +106,13 @@ Analicen las siguientes formas de organizar información:
 Para el problema de la biblioteca, indiquen qué estructura utilizarían para representar:
 
 a) Los datos de una única devolución.
+dias_atraso, estado_reserva son valores unicos que no cambian a lo largo de la ejercución
 
 b) Las multas cobradas durante un día.
+Lista de numeros que representa todos los valores de las multas cobradas en el dia: multas_diarias[int]
 
 c) La recaudación de cuatro sucursales durante siete días.
+recaudacion_sucursales[7,4] (7 filas que representan los valores para cada dia, 4 columnas que representan a cada sucursal)
 
 Justifiquen cada elección considerando la cantidad de datos y la forma en que deberán recorrerse.
 
