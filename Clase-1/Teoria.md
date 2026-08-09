@@ -34,7 +34,7 @@ El trabajo final y el portafolio son grupales. El parcial es individual.
 
 Nicole: 5 años de experiencia en el ámbito, actualmente trabajo con Java, React y Oracle. Mi expectativa es seguir aprendiendo.
 Jesica:
-Priscila: 
+Priscila: Realice cursos imtroductorios de programacion, no muy desafiantes para mi gusto, mi objetivo es fortalecer mis conocimientos de programacion y buscar trabajo en esta area
 
 **Nombre del equipo:** Error 404.
 
