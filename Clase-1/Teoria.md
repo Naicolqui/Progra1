@@ -194,3 +194,7 @@ Entreguen un único documento grupal que contenga:
 - Capturas de ejecución y una breve conclusión grupal.
 
 Cada integrante deberá agregar una reflexión individual sobre los conceptos que pudo recuperar con seguridad y aquellos que necesita seguir reforzando.
+
+Reflexion final:
+
+- Nicole: La actividad me ayudo a recordar conceptos que vi en UTN en Algoritmos.
