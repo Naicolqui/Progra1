@@ -90,7 +90,7 @@ funcion calculo_multa(estadoReserva, diasAtraso)
 
 d) Representen la solución mediante un diagrama de flujo.
 
-![Diagrama de flujo](../diagrama-de-flujo.png)
+![Diagrama de flujo](./diagrama-de-flujo.png)
 
 e) Implementen el programa en Python y comparen los resultados obtenidos con los casos de prueba.
 Resulto en archivo ejercicio-3.py
