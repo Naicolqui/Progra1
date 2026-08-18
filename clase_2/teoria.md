@@ -78,3 +78,10 @@ En caso de requerir no modificar la lista original, se puede generar una copia d
 En principal: lista de de juegos, nombre del videojuego a buscar, a mostrar o a agregar
 
 En el modulo: entregarle los datos solicitados para trabajarlos por parámetro.
+
+
+
+### __________________________________________________________________________________________________
+Reflexiones
+
+Priscila : La herramienta que más nos ayudó en esta clase a darle claridad al código fue la modularización: separar las funciones en un módulo (videojuegos.py) y la ejecución en el programa principal (principal.py). Al definir y organizar las funciones en un archivo aparte y usarlas mediante import, el programa principal no queda saturado de código y se vuelve mucho más fácil de leer y entender, ya que solo se encarga de llamarlas. Además de ganar en orden y legibilidad, esto nos permite reutilizar esas mismas funciones sin tener que volver a escribirlas, mientras que herramientas como el slicing ayudaron a hacer las operaciones con listas de forma más práctica y limpia.
