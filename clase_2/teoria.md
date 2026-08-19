@@ -89,3 +89,5 @@ Priscila : La herramienta que más nos ayudó en esta clase a darle claridad al 
 
 
 Jesica : Al igual que Priscila, el concepto de modularización llamando a las funciones mediante el import  en un menú principal hacen mas fácil de leer y probar el código.
+
+Nicole: Coincido con mis compañeras, muy interesante.
