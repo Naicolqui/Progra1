@@ -47,4 +47,4 @@ isdigit() = consulta si en son solo numeros, ejemplo: "2026"
 isalnum() = consulta si es alfanumerico, ejemplo: "Python3"
 isalnum() retornara False cuando contenga espacios ya que este no se considera como un caracter alfanumerico.
 
-
+"""
