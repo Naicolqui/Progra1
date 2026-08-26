@@ -44,3 +44,9 @@ Porque descarga e integra la versión más reciente subida por los compañeros a
 
 d) Escriban tres mensajes de commit breves, descriptivos y en presente.
 (estan en el otro repositorio)
+
+# 7. Conversión de tipos y formateo
+
+La f-string es más clara porque las variables van dentro del texto. La concatenación se complica por la cantidad de comillas y signos
+La f-string no requiere ninguna conversión manual. La concatenación exige usar str() en cantidad, precio y total (3 conversiones).
+La f-string permite usar :.2f para mostrar dos decimales (ejemplo: $150.00). La concatenación muestra el número simple (ejemplo: $150.0).
