@@ -30,3 +30,17 @@ Git es un sistema de control de versiones que registra cambios en los archivos d
 - **e) Push y pull**: push es un comando a través del cual publicamos los commits que hicimos de forma local en nuestro repositorio, de forma que pasa a ser remoto. Con pull nos traemos a nuestro repo local la última versión disponible en el repositorio remoto.
 
 La actividad integradora mencionada en el punto 8 del orientador de la clase va a ser llevada a cabo dentro del proyecto integrador y su respectivo repositorio: [https://github.com/jessbenitez/ProyectoProgramacionI](https://github.com/jessbenitez/ProyectoProgramacionI)
+
+# 4.Primer commit y trabajo colaborativo seguro
+Respondan:
+a) ¿Qué información muestra git status?
+Muestra el estado actual del repositorio: en qué rama estás parado, qué archivos han sido modificados, cuáles están listos en el área de preparación (staging area) y qué archivos nuevos aún no están rastreados por Git.
+
+b) ¿Qué diferencia existe entre git add y git commit?
+git add selecciona y prepara los archivos modificados en el área de preparación, mientras que git commit guarda definitivamente esa captura de cambios en el historial local del repositorio con un mensaje explicativo.
+
+c) ¿Por qué cada integrante debe ejecutar git pull antes de comenzar?
+Porque descarga e integra la versión más reciente subida por los compañeros a GitHub, lo que evita trabajar sobre código desactualizado y reduce la posibilidad de generar conflictos de fusión (merge conflicts).
+
+d) Escriban tres mensajes de commit breves, descriptivos y en presente.
+(estan en el otro repositorio)
