@@ -50,3 +50,17 @@ d) Escriban tres mensajes de commit breves, descriptivos y en presente.
 La f-string es más clara porque las variables van dentro del texto. La concatenación se complica por la cantidad de comillas y signos
 La f-string no requiere ninguna conversión manual. La concatenación exige usar str() en cantidad, precio y total (3 conversiones).
 La f-string permite usar :.2f para mostrar dos decimales (ejemplo: $150.00). La concatenación muestra el número simple (ejemplo: $150.0).
+
+
+Actividad para el Portfolio
+
+• Explicación de la inmutabilidad de las cadenas y de la diferencia entre transformar y validar.
+Las cadenas son inmutables porque Python las guarda fijas en la memoria para que no se alteren por error. Si quiero cambiarle algo a un texto, Python no modifica el original, sino que genera uno nuevo con ese cambio.
+
+Transformar: Cambia el texto y me da uno nuevo formateado (por ejemplo, pasarlo a mayúsculas con upper()).
+
+Validar: Solo revisa si el texto cumple una regla (como ver si tiene números con isdigit()) y me responde True o False.
+
+• Reflexión individual: ¿cómo contribuyen el versionado y los commits descriptivos al trabajo del equipo?
+Usar Git nos evita pisar el trabajo entre compañeros y nos da la tranquilidad de volver atrás si algo falla. Además, poner mensajes de commit claros ayuda a que todos sepamos qué cambió en cada paso sin perder tiempo adivinando qué hizo el otro.
+
