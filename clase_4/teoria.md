@@ -5,6 +5,16 @@
 Un objeto es mutable cuando se puede modificar su contenido después de haberlo creado, sin necesidad de generar uno nuevo. A diferencia de un objeto inmutable, el cual una vez creado no se puede alterar.
 
 **Ejercicio 2:**
+a)Ambos son secuencias ordenadas de elementos.Se puede acceder a sus elementos mediante índices (ej. elemento[0]) y slicing/rebanadas ([1:3]).Pueden contener elementos de distintos tipos de datos (enteros, texto, float, etc.)Ambas se pueden recorrer con un bucle for y consultar su tamaño con len().
+b)Inmutabilidad: Las listas son mutables (se pueden modificar, agregar o eliminar elementos mediante .append(), .pop(), etc.), mientras que las tuplas son inmutables (su tamaño y contenido fijo no se pueden cambiar una vez creadas).
+Sintaxis: Las listas usan corchetes [1, 2, 3] y las tuplas usan paréntesis (1, 2, 3).
+c) Da el siguiente error : 
+TypeError: 'tuple' object does not support item assignment
+
+Esto confirma que las tuplas son inmutables y no permiten modificar sus elementos una vez creadas.
+
+![Comprobación del TypeError](Comprobacion-tuplas.png)
+
 
 d) Un ejemplo de tupla podria ser una fecha de cumpleaños de un usuario, porque esta no va a cambiar y tampoco queremos que lo haga.
 `fecha_nacimiento = (25, 9, 2005)  `
