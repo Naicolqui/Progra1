@@ -13,7 +13,7 @@ TypeError: 'tuple' object does not support item assignment
 
 Esto confirma que las tuplas son inmutables y no permiten modificar sus elementos una vez creadas.
 
-![Comprobación del TypeError](casos_prueba/Comprobacion-tuplas.png)
+![Comprobación del TypeError](casos_prueba/comprobacion-tuplas.png)
 
 
 d) Un ejemplo de tupla podria ser una fecha de cumpleaños de un usuario, porque esta no va a cambiar y tampoco queremos que lo haga.
