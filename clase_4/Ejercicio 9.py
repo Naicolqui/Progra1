@@ -42,10 +42,40 @@ def muestra_catalogo(lista_productos):
     
     
 
+def buscar_producto(productos, codigo):
+    for producto in productos:
+        if producto[0] == codigo:
+            return producto
+    return None
+
+def producto_mayor_precio(productos):
+    if not productos:
+        return None
+
+    mayor = productos[0]
+    for producto in productos:
+        if producto[2] > mayor[2]:
+            mayor = producto
+    return mayor
+
+
+
 def main():
     catalogo=cargar_productos()
 
     muestra_catalogo(catalogo)
+
+    if catalogo:
+        codigo_a_buscar = input("\nIngrese el código de producto a buscar: ")
+        encontrado = buscar_producto(catalogo, codigo_a_buscar)
+        
+        if encontrado:
+            print("Producto encontrado:", encontrado)
+        else:
+            print("No existe un producto con ese código.")
+
+        mas_caro = producto_mayor_precio(catalogo)
+        print("Producto de mayor precio:", mas_caro)
 
 
 main()
