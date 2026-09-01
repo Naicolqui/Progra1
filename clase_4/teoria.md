@@ -81,7 +81,16 @@ print(dia)
 print(mes)
 print(anio)
 
+c) 
+# Intento de desempaquetado en dos variables:
+dia_nac, mes_nac = fecha
 
+Al ejecutar dia_nac, mes_nac = fecha, Python arroja el error:
+ValueError: too many values to unpack (expected 2)
+
+Esto ocurre porque la tupla fecha contiene 3 elementos (25, "Septiembre", 2026), pero en la asignación solo se le están pasando 2 variables (dia_nac y mes_nac). Python no puede determinar por sí solo cuál de los tres datos ignorar, por lo que detiene el programa.
+
+d)Para que el desempaquetado funcione correctamente, debe cumplirse una relación exacta 1 a 1: la cantidad de variables a la izquierda del signo = debe ser estrictamente igual a la cantidad de elementos contenidos en la tupla. 
 
 
 
