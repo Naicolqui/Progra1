@@ -19,6 +19,7 @@ Esto confirma que las tuplas son inmutables y no permiten modificar sus elemento
 d) Un ejemplo de tupla podria ser una fecha de cumpleaños de un usuario, porque esta no va a cambiar y tampoco queremos que lo haga.
 `fecha_nacimiento = (25, 9, 2005)  `
 
+<<<<<<< HEAD
 
 **Ejercicio 3:**
 
@@ -100,3 +101,18 @@ d)Para que el desempaquetado funcione correctamente, debe cumplirse una relació
 Usaríamos una lista al trabajar con  una colección homogénea que va a crecer, achicarse o reordenarse. En cambio el uso de una tupla resultaría mejor al trabajar con conjuntos fijo de valores relacionados y se necesite la inmutabilidad garantizada de dichos datos
 
 
+=======
+a) Total vendido por producto
+b) Total de una semana indicada
+c) Código del producto con mayor venta
+d) Validar semana e capturar errores
+
+Sección 9 (Proyecto):
+
+Implementar: precio_promedio()
+Validaciones: códigos repetidos, tuplas no modificables
+
+Sección 10 (Verificación):
+
+Todos los casos de prueba
+>>>>>>> 5385eec (ejercicio 8)
