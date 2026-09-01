@@ -17,7 +17,7 @@ nueva tupla."""
 def cargar_productos():
     lista_productos=[]
     
-    codigo=input("Ingrese el codigo de producto:  ")
+    codigo=input("Ingrese el codigo de producto, si ha terminado escriba fin:  ")
     while codigo.lower() != 'fin':
         existe = False
         for producto in lista_productos:
@@ -58,12 +58,22 @@ def producto_mayor_precio(productos):
             mayor = producto
     return mayor
 
+def precio_promedio(productos):
+    if not productos:
+        return None
+
+    value = 0
+    for producto in productos:
+        value += producto[2]
+    return value / len(productos)
 
 
 def main():
     catalogo=cargar_productos()
 
     muestra_catalogo(catalogo)
+    valor_promedio = precio_promedio(catalogo)
+    print(f"El precio promedio es: {valor_promedio}")
 
     if catalogo:
         codigo_a_buscar = input("\nIngrese el código de producto a buscar: ")
