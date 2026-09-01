@@ -13,13 +13,12 @@ TypeError: 'tuple' object does not support item assignment
 
 Esto confirma que las tuplas son inmutables y no permiten modificar sus elementos una vez creadas.
 
-![Comprobación del TypeError](Comprobacion-tuplas.png)
+![Comprobación del TypeError](casos_prueba/Comprobacion-tuplas.png)
 
 
 d) Un ejemplo de tupla podria ser una fecha de cumpleaños de un usuario, porque esta no va a cambiar y tampoco queremos que lo haga.
 `fecha_nacimiento = (25, 9, 2005)  `
 
-<<<<<<< HEAD
 
 **Ejercicio 3:**
 
@@ -100,19 +99,43 @@ d)Para que el desempaquetado funcione correctamente, debe cumplirse una relació
 
 Usaríamos una lista al trabajar con  una colección homogénea que va a crecer, achicarse o reordenarse. En cambio el uso de una tupla resultaría mejor al trabajar con conjuntos fijo de valores relacionados y se necesite la inmutabilidad garantizada de dichos datos
 
+**Ejercicio 7:**
 
-=======
 a) Total vendido por producto
 b) Total de una semana indicada
 c) Código del producto con mayor venta
 d) Validar semana e capturar errores
 
-Sección 9 (Proyecto):
+**Ejercicio 9 (Proyecto):**
 
 Implementar: precio_promedio()
 Validaciones: códigos repetidos, tuplas no modificables
 
-Sección 10 (Verificación):
+**Sección 10 (Verificación):**
 
-Todos los casos de prueba
->>>>>>> 5385eec (ejercicio 8)
+a)
+![a](casos_prueba/ejercicio10_a.png)
+
+b)
+![b](casos_prueba/ejercicio10_b.png)
+
+c)
+![c](casos_prueba/ejercicio10_c.png)
+
+d)
+![d](casos_prueba/ejercicio10_d.png)
+
+e)
+![e](casos_prueba/ejercicio10_e.png)
+
+f)
+![f](casos_prueba/ejercicio10_f.png)
+![f](casos_prueba/ejercicio10_f_2.png)
+
+g)
+![g](casos_prueba/ejercicio10_g.png)
+![g](casos_prueba/ejercicio10_g_2.png)
+
+
+Reflexion final:
+- Nicole: muy interesante el uso de tuplas.

@@ -30,7 +30,18 @@ def cargar_productos():
         
            
         descripcion=input("Ingrese descripcion del producto:  ")
-        precio=float(input("Ingrese el precio del producto:  "))
+
+        precio_valido = False
+        while not precio_valido:
+            try:
+                precio=float(input("Ingrese el precio del producto:  "))
+                if precio <= 0:
+                    print("El precio debe ser mayor a cero.")
+                else:
+                    precio_valido = True
+            except ValueError:
+                print("Precio invalido. Ingrese solo numeros.")
+
         producto=(codigo,descripcion,precio)
         lista_productos.append(producto)
         codigo=input("Ingrese el codigo de producto:  ")
