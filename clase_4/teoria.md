@@ -139,3 +139,4 @@ g)
 
 Reflexion final:
 - Nicole: muy interesante el uso de tuplas.
+- Priscila : Usaría una tupla para agrupar datos de estructura fija que representan una sola cosa, como una ubicación (latitud, longitud).
