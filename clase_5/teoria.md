@@ -1,5 +1,5 @@
 ***Ejercicio 3***
-!(clase_5/imagen.png)
+![Validación de errores](image.png)
 validacion con :
 10 : No presento error, el codigo pudo ejecutarse correctamente
 0 : Produjo el error ZeroDivisionError
