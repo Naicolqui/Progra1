@@ -140,3 +140,5 @@ g)
 Reflexion final:
 - Nicole: muy interesante el uso de tuplas.
 - Priscila : Usaría una tupla para agrupar datos de estructura fija que representan una sola cosa, como una ubicación (latitud, longitud).
+- Jesica: Usaríamos una lista al trabajar con  una colección homogénea que va a crecer, achicarse o reordenarse. En cambio el uso de una tupla resultaría mejor al trabajar con conjuntos fijo de valores relacionados y se necesite la inmutabilidad garantizada de dichos datos
+
