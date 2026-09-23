@@ -1,0 +1,33 @@
+=== ERROR: simulador con python3 normal (sin ventana visible) ===
+
+Comando ejecutado (primer intento, PID 88749, ya finalizado):
+
+$ cd entorno
+$ python3 -m sim --robot go2 --materia tp02 &
+
+El proceso arrancaba y quedaba corriendo en background (verificado con
+`ps aux`, apareciendo con uso de CPU > 0%), y generaba correctamente el
+archivo de estado del simulador:
+
+$ cat entorno/sim/.simulador_activo.json
+{"robot": "go2", "materia": "tp02", "transporte": "local", "domain": 0,
+ "interfaz": "lo",
+ "pose_archivo": ".../entorno/sim/.pose_actual.json",
+ "grilla": null, "puerto": 8765}
+
+Observacion: el proceso estaba vivo, sin imprimir ningun error en stdout ni
+stderr, pero NO aparecia ninguna ventana 3D en pantalla. No hay traceback ni
+mensaje que explique el problema.
+
+Diagnostico: ver PROBLEMAS.md, Problema N.2. La causa es que
+`mujoco.viewer.launch_passive` (usado en entorno/sim/visor.py) necesita
+correr en el hilo principal del proceso, y en macOS el interprete estandar
+`python3` no le cede ese control de la forma que el visor requiere. La
+libreria mujoco distribuye para eso un ejecutable especial: `mjpython`.
+
+Solucion aplicada (ver evidencia en 04_soluciones/):
+$ cd entorno
+$ mjpython -m sim --robot go2 --materia tp02 &
+
+Con mjpython la ventana "MuJoCo : go2 - escena limpia UADE" aparecio
+correctamente en pantalla (ver evidencias/05_gemelo_digital/ventana_mujoco_go2.png).

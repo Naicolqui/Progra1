@@ -1,0 +1,16 @@
+$ python3 --version
+Python 3.12.13
+
+$ pip3 --version
+pip 25.0.1 from /Users/nquilmore/.pyenv/versions/3.12.13/lib/python3.12/site-packages/pip (python 3.12)
+
+$ git --version
+git version 2.39.5 (Apple Git-154)
+
+$ uname -m
+arm64
+
+$ sw_vers
+ProductName:		macOS
+ProductVersion:		15.7.4
+BuildVersion:		24G517

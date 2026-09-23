@@ -1,0 +1,13 @@
+=== SOLUCION: lanzar el simulador con mjpython en macOS ===
+
+$ which mjpython
+/Users/nquilmore/.pyenv/shims/mjpython
+
+$ cd entorno && mjpython -m sim --robot go2 --materia tp02 &
+
+Verificacion del proceso activo (ps aux), corriendo desde mjpython:
+nquilmore        88996  82.2  4.2 413651664 704288   ??  RN    6:48PM  15:06.87 /Users/nquilmore/.pyenv/versions/3.12.13/bin/python3 -m sim --robot go2 --materia tp02
+
+Resultado: la ventana 'MuJoCo : go2 - escena limpia UADE' se abrio
+correctamente con el robot Go2 visible sobre la grilla.
+Ver captura en evidencias/05_gemelo_digital/ventana_mujoco_go2.png

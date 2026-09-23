@@ -1,0 +1,14 @@
+$ pip3 show mujoco
+Name: mujoco
+Version: 3.14.0
+Summary: MuJoCo Physics Simulator
+Home-page: https://github.com/google-deepmind/mujoco
+Author: 
+Author-email: Google DeepMind <mujoco@deepmind.com>
+License-Expression: Apache-2.0
+Location: /Users/nquilmore/.pyenv/versions/3.12.13/lib/python3.12/site-packages
+Requires: absl-py, etils, glfw, numpy, pyopengl, websockets
+Required-by: 
+
+$ python3 -c "import mujoco; print(mujoco.__version__)"
+3.14.0

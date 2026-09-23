@@ -1,0 +1,20 @@
+[OK] Conectado a Unitree Go2 (perro).
+     Limites: 0.2 m/s, 0.5 rad/s, 10.0 s por orden.
+========================================
+ REPORTE DE MISION
+========================================
+ Comandos recibidos:  9
+ Comandos ejecutados: 9
+ Comandos omitidos:   0
+----------------------------------------
+ [OK] ('avanzar', 0.2, 2.0)
+ [OK] ('girar', -0.5, 3.14)
+ [OK] ('avanzar', 0.2, 2.0)
+ [OK] ('girar', -0.5, 3.14)
+ [OK] ('avanzar', 0.2, 2.0)
+ [OK] ('girar', -0.5, 3.14)
+ [OK] ('avanzar', 0.2, 2.0)
+ [OK] ('girar', -0.5, 3.14)
+ [OK] ('detenerse',)
+========================================
+[OK] Desconectado.

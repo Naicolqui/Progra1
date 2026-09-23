@@ -1,0 +1,48 @@
+[OK] Conectado a Unitree Go2 (perro).
+     Limites: 0.2 m/s, 0.5 rad/s, 10.0 s por orden.
+========================================
+ REPORTE DE MISION
+========================================
+ Comandos recibidos:  4
+ Comandos ejecutados: 4
+ Comandos omitidos:   0
+----------------------------------------
+ [OK] ('avanzar', 0.2, 2.0)
+ [OK] ('girar', -0.5, 3.14)
+ [OK] ('avanzar', 0.2, 2.0)
+ [OK] ('detenerse',)
+========================================
+========================================
+ REPORTE DE MISION
+========================================
+ Comandos recibidos:  11
+ Comandos ejecutados: 4
+ Comandos omitidos:   7
+----------------------------------------
+ [OK] ('avanzar', 0.2, 2.0)
+ [OK] ('girar', -0.5, 3.14)
+ [OMITIDO] ('avanzar', 0.9, 2.0) -> RECHAZADO por seguridad: Velocidad 0.900 m/s: el maximo de tp02-programacion-i es 0.20 m/s. Baja la velocidad y volve a probar.
+ [OMITIDO] ('avanzar', 0.2, 50.0) -> RECHAZADO por seguridad: Tiempo 50.00 s: el maximo por comando en tp02-programacion-i es 10.0 s. Parti el movimiento en varios pasos.
+ [OMITIDO] ('girar', 3.0, 2.0) -> RECHAZADO por seguridad: Velocidad de giro 3.000 rad/s: el maximo de tp02-programacion-i es 0.50 rad/s.
+ [OMITIDO] ('volar', 0.2, 1.0) -> Comando invalido (nombre, cantidad o tipo de parametros)
+ [OMITIDO] ('avanzar', 'rapido', 2.0) -> Comando invalido (nombre, cantidad o tipo de parametros)
+ [OMITIDO] ('avanzar', 0.2) -> Comando invalido (nombre, cantidad o tipo de parametros)
+ [OMITIDO] ('avanzar', 0.2, -3.0) -> Comando invalido (nombre, cantidad o tipo de parametros)
+ [OK] ('saludar',)
+ [OK] ('detenerse',)
+========================================
+========================================
+ REPORTE DE MISION
+========================================
+ Comandos recibidos:  6
+ Comandos ejecutados: 5
+ Comandos omitidos:   1
+----------------------------------------
+ [OK] ('avanzar', 0.15, 2.0)
+ [OK] ('girar', 0.5, 1.57)
+ [OK] ('avanzar', 0.15, 2.0)
+ [OMITIDO] ('girar', 5.0, 1.0) -> RECHAZADO por seguridad: Velocidad de giro 5.000 rad/s: el maximo de tp02-programacion-i es 0.50 rad/s.
+ [OK] ('saludar',)
+ [OK] ('detenerse',)
+========================================
+[OK] Desconectado.
