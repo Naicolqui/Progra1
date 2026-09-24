@@ -105,3 +105,80 @@ el robot Go2 visible sobre la grilla, guardada en
 > no necesita `mjpython`); lo que sí requiere `mjpython` es exclusivamente el
 > **simulador** (`INICIAR_SIMULADOR.sh` / `python -m sim`), porque es el que
 > abre la ventana 3D.
+
+---
+
+## Problema Nº 3
+
+**Qué se estaba intentando hacer:** Verificar visualmente que
+`robot.saludar()` (llamado desde `ejecutar_comando`) produce una animación
+en el Go2 dentro del simulador.
+
+**Comando ejecutado:**
+```python
+from robot import Robot
+from mi_tp02 import ejecutar_comando
+
+robot = Robot()
+robot.conectar()
+resultado = ejecutar_comando(robot, ('saludar',))
+print(resultado)
+```
+
+**Resultado esperado:** El robot levanta la pata delantera izquierda (pose
+`saludo` definida en `entorno/sim/robots.py` para el Go2) durante unos
+segundos.
+
+**Resultado obtenido:** El programa imprime `saludar() ejecutado` (sin
+ningún error ni excepción), pero el robot en la ventana de MuJoCo **no se
+mueve**.
+
+**Mensaje de error:** Ninguno — la llamada se completa exitosamente desde el
+punto de vista del código del alumno.
+
+**Interpretación del grupo:** El problema no está en `comando_es_valido` ni
+en `ejecutar_comando`: ambos funcionan como se espera (el comando es válido,
+se llama a `robot.saludar()`, no se lanza `ErrorDeSeguridad`). El problema
+está más adentro, en el propio simulador.
+
+**Hipótesis sobre la causa:** Se rastreó el camino completo de la orden:
+
+1. `robot.saludar()` (en `entorno/sim/robot.py:346`) llama a
+   `self._cliente.WaveHand()`.
+2. `WaveHand()` (en `entorno/sim/local.py:258`) manda por socket
+   `{"orden": "gesto", "nombre": "saludo"}` — con el nombre **`"saludo"`**.
+3. El servidor recibe eso y ejecuta `self.mundo.gesto("saludo", 2.0)`
+   (`local.py:162`), que guarda `self.accion = "saludo"` durante 2 segundos.
+4. Pero quien dibuja la pose del saludo revisa
+   `if e["accion"] in ("saludando", "besando")` (en `arrancar.py:293` y
+   `visor.py:59`) — es decir, espera el string **`"saludando"`**, no
+   `"saludo"`.
+
+Como `"saludo" != "saludando"`, la condición nunca se cumple y la pose
+jamás se aplica, aunque el pedido se procesó "OK" en todos los pasos
+intermedios. Como evidencia adicional de que es un bug de nombres y no de
+lógica: en `entorno/sim/servicio_sport_go2.py:89` (el camino que se usa por
+DDS con el robot físico) el mismo gesto se dispara con
+`self.mundo.gesto("saludando")` — ahí sí con el nombre correcto. Es una
+inconsistencia entre los dos transportes (`local.py` vs.
+`servicio_sport_go2.py`) del propio simulador de la cátedra.
+
+**Solución 1 intentada y resultado:** No se modificó el simulador (fuera del
+alcance del TP; el enunciado pide no tocar `robot.py`, y `local.py` es
+código interno del laboratorio, no del alumno). Se documenta como hallazgo
+de diagnóstico: el comando `saludar` funciona correctamente del lado del
+controlador (se valida, se ejecuta, no lanza excepciones); la falta de
+animación visible es un bug de nomenclatura interno del simulador
+(`"saludo"` vs. `"saludando"`), ajeno al código entregado.
+
+**Solución 2 intentada y resultado:** No se aplicó ninguna, por lo indicado
+arriba.
+
+**Estado final:** NO RESUELTO (a nivel simulador) — pero identificado,
+explicado y no atribuible al controlador de misiones. `ejecutar_comando`
+se considera correcto: reporta `"saludar() ejecutado"` porque el pedido al
+robot no lanzó ningún error, que es exactamente el contrato esperado.
+
+**Evidencia:** Salida de consola confirmando `saludar() ejecutado` sin
+excepciones, y lectura de código fuente citada arriba (`robot.py`,
+`local.py`, `arrancar.py`, `visor.py`, `servicio_sport_go2.py`).

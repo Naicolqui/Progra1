@@ -19,41 +19,46 @@ Se usó exclusivamente la modalidad **simulada con MuJoCo** (sin CycloneDDS ni
 SDK oficial de Unitree, tal como indica el orientador).
 
 ## Cómo ejecutar
-1. Instalar dependencias según `UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I/INSTALACION.md`.
-2. Abrir el simulador:
-   ```
-   cd UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I
-   ./INICIAR_SIMULADOR.sh
-   ```
-   Elegir `2 - Go2` y esperar a que abra la ventana de MuJoCo.
+1. Instalar dependencias según `UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I/INSTALACION.md`
+   (resumen: `python3 -m pip install mujoco`).
 
-   **Nota (macOS):** el script usa `python3` internamente, pero el visor de
-   MuJoCo (`mujoco.viewer.launch_passive`) en macOS necesita correr en el
-   hilo principal a través del ejecutable `mjpython` (incluido con el
-   paquete `mujoco`). Si el proceso arranca pero no aparece ninguna ventana,
-   lanzarlo manualmente así en su lugar (ver `PROBLEMAS.md` #2):
+2. Abrir el simulador (macOS — requiere `mjpython`, ver nota abajo):
    ```
    cd UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I/entorno
    mjpython -m sim --robot go2 --materia tp02
    ```
-3. En otra terminal, ejecutar el controlador (ya copiado en `mi_desarrollo/mi_tp02.py`):
+   Esperar a que aparezca la ventana "MuJoCo : go2 - escena limpia UADE" con
+   el robot Go2 visible. Dejarla abierta.
+
+   **Nota:** `INICIAR_SIMULADOR.sh` lanza el simulador con `python3` a
+   secas, que funciona en Linux/Windows pero **no en macOS**: el visor de
+   MuJoCo (`mujoco.viewer.launch_passive`) necesita correr en el hilo
+   principal, y en Mac eso solo lo logra el ejecutable `mjpython`
+   (incluido con el paquete `mujoco`). Con `python3` el proceso queda vivo
+   pero nunca aparece ninguna ventana — usar siempre `mjpython -m sim ...`
+   directamente, como arriba (ver `PROBLEMAS.md` #2).
+
+3. En otra terminal, con el simulador ya abierto, ejecutar el controlador
+   (ya copiado en `mi_desarrollo/mi_tp02.py`):
    ```
+   cd UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I
    python3 mi_desarrollo/mi_tp02.py
    ```
-   O el equivalente `EJECUTAR_MI_CODIGO.sh`.
 
-El código fuente entregado también está en `codigo/tp02_quilmore.py` (copia
-idéntica a la que se ejecuta desde `mi_desarrollo/`).
+4. Para cerrar el simulador: `Ctrl+C` en su terminal, o cerrar la ventana.
+
+El código fuente entregado también está en `codigo/tp02.py` (copia
+idéntica a la que se ejecuta desde `mi_desarrollo/mi_tp02.py`).
 
 ## Estructura de la entrega
 ```
-TP02_Quilmore/
+TP02/
 ├── README.md
 ├── BITACORA.md
 ├── PROBLEMAS.md
 ├── CONCLUSIONES.md
 ├── codigo/
-│   └── tp02_quilmore.py
+│   └── tp02.py
 └── evidencias/
     ├── 01_entorno/
     ├── 02_instalacion/
