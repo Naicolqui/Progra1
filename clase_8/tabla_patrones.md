@@ -1,0 +1,9 @@
+# Tabla de patrones - Formulario de registro
+
+| Campo | Patrón | Interpretación | Alcance | Ejemplos válidos | Ejemplos inválidos |
+|---|---|---|---|---|---|
+| Nombre | `[A-Za-z ]+` | Uno o más caracteres que pueden ser letras mayúsculas, minúsculas o espacios | Acepta nombres de una o más palabras, incluso con espacios dobles entre ellas. No acepta números, símbolos, tildes ni ñ | `Juan Perez`, `Maria`, `Ana  Lopez` | `Juan2`, `María`, `Muñoz` |
+| Legajo | `[0-9]{6}` | Exactamente 6 dígitos del 0 al 9 | Acepta ceros a la izquierda. No acepta letras, espacios ni una cantidad de dígitos distinta de 6 | `123456`, `000123` | `12345`, `1234567`, `12a456` |
+| Correo | `[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3,}` | Nombre de usuario (letras, dígitos o `._%+-`), una `@`, un dominio (letras, dígitos, `.` o `-`), un punto literal y una extensión de 3 o más letras | Acepta extensiones como `.com` o `.net`. No acepta extensiones de 2 letras como `.ar`, ni correos sin `@` o sin extensión. Se valida con `findall()`, que busca el patrón dentro del texto ingresado | `ana.p@gmail.com`, `juan@hotmail.com` | `ana@gmail`, `ana.gmail.com`, `ana@mail.ar`, `@gmail.com` |
+| Teléfono | `[0-9]{2}-[0-9]{4}-[0-9]{4}` | 2 dígitos de código de área, un guion, 4 dígitos, un guion y 4 dígitos | Acepta números con código de área de 2 dígitos, como los de Buenos Aires. No acepta números sin guiones, con espacios ni con códigos de área de 3 o 4 dígitos | `11-2345-6789`, `22-1234-5678` | `1123456789`, `011-2345-6789`, `11 2345 6789` |
+| Comisión | `[A-Z]{1}-[0-9]{4}` | Una letra mayúscula, un guion y 4 dígitos | Acepta cualquier letra mayúscula seguida de 4 dígitos. No acepta minúsculas, más de una letra, falta de guion ni otra cantidad de dígitos | `K-1021`, `A-0001` | `k-1021`, `K1021`, `K-10`, `KA-1021` |
