@@ -2,6 +2,12 @@
 #  TP02 - Programacion I
 #  Controlador de misiones
 #
+#  Nombre y apellido:  Nicole Quilmore
+#  Comision:           .....................................
+#
+#  Este archivo es una copia resuelta de:
+#  UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I/mi_desarrollo/mi_tp02.py
+#
 #  Para ejecutarlo:
 #    1. Abrir INICIAR_SIMULADOR (elegir 2 - Go2) desde
 #       UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I/
@@ -50,11 +56,9 @@ def comando_es_valido(comando):
 
     if nombre in ("avanzar", "girar"):
         velocidad, tiempo = params
-        # bool es subclase de int: se descarta explicitamente para no
-        # aceptar True/False como si fueran numeros validos.
-        if isinstance(velocidad, bool) or not isinstance(velocidad, (int, float)):
+        if not isinstance(velocidad, (int, float)):
             return False
-        if isinstance(tiempo, bool) or not isinstance(tiempo, (int, float)):
+        if not isinstance(tiempo, (int, float)):
             return False
         if tiempo < 0:
             return False
@@ -118,14 +122,14 @@ def ejecutar_mision(robot, mision, historial):
 # =====================================================================
 #  PARTE 4 - El reporte final
 # =====================================================================
-def generar_reporte(historial):
+def generar_reporte(historial, titulo="REPORTE DE MISION"):
     """Muestra por pantalla un resumen de la mision."""
     total = len(historial)
     ejecutados = sum(1 for r in historial if r["ejecutado"])
     omitidos = total - ejecutados
 
     print("=" * 40)
-    print(" REPORTE DE MISION")
+    print(f" {titulo}")
     print("=" * 40)
     print(f" Comandos recibidos:  {total}")
     print(f" Comandos ejecutados: {ejecutados}")
@@ -151,24 +155,26 @@ def main():
 
     try:
         ejecutar_mision(robot, MISION_BASICA, historial)
-        generar_reporte(historial)
+        generar_reporte(historial, "Mision basica: ")
 
         historial_errores = []
         ejecutar_mision(robot, MISION_CON_ERRORES, historial_errores)
-        generar_reporte(historial_errores)
+        generar_reporte(historial_errores, "Mision con errores: ")
 
         # Misión propia: al menos 5 comandos, con un error intencional.
         mision_propia = [
             ("avanzar", 0.15, 2.0),
-            ("girar", 0.5, 1.57),       # 90 grados a la izquierda
+            ("girar", 0.5, 1.57),
             ("avanzar", 0.15, 2.0),
-            ("girar", 5.0, 1.0),        # MAL: supera velocidad angular max
+            ("girar", 5.0, 1.0),       # Esta mal porque es muy rapido, entonces rechaza.
+            ("saludar",),
+            ("detenerse",),
             ("saludar",),
             ("detenerse",),
         ]
         historial_propia = []
         ejecutar_mision(robot, mision_propia, historial_propia)
-        generar_reporte(historial_propia)
+        generar_reporte(historial_propia, "Mision propia: ")
     finally:
         robot.detenerse()
         robot.desconectar()
