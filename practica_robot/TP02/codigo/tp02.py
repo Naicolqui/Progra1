@@ -2,9 +2,6 @@
 #  TP02 - Programacion I
 #  Controlador de misiones
 #
-#  Nombre y apellido:  Nicole Quilmore
-#  Comision:           .....................................
-#
 #  Este archivo es una copia resuelta de:
 #  UadeRobotLab/05LaboratoriosTPs/TP02_Programacion_I/mi_desarrollo/mi_tp02.py
 #
