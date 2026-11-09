@@ -1,0 +1,17 @@
+from funcion_02 import *
+
+# CONSIGNA: escribir pruebas usando solo assert.
+# Casos sugeridos: numero par, numero impar, cero.
+
+def test_numero_par():
+    assert es_par(4) == True
+    assert es_par(10) == True
+    assert es_par(-2) == True
+
+def test_numero_impar():
+    assert es_par(7) == False
+    assert es_par(1) == False
+    assert es_par(-3) == False
+
+def test_cero():
+    assert es_par(0) == True
